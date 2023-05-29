@@ -2,6 +2,10 @@
 
 <%= render 'current_user' %>
 
+<div>
+  <%= link_to 'Create Event', new_event_path %>
+</div>
+
 <% @events.all.reverse.each do |event| %>
   <%= render partial: 'event', locals: { event: event } %>
 <% end %>
