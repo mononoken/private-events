@@ -1,9 +1,5 @@
 <h1>Greg's List of Cool Happenings</h1>
 
 <% @events.all.reverse.each do |event| %>
-  <div class="event-info">
-    <h2><%= event.name %></h2>
-    <p><%= event.datetime %></p>
-    <p><%= event.location %></p>
-  </div>
+  <%= render partial: 'event', locals: { event: event } %>
 <% end %>
