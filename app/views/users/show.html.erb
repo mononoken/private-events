@@ -1,0 +1,13 @@
+<h1><%= @user.email %>'s Events</h1>
+
+<ul class="events">
+  <% @user.events.each do |event| %>
+    <li class="event">
+      <ul class="event-info">
+        <li><%= event.name %></li>
+        <li><%= event.date %></li>
+        <li><%= event.location %></li>
+      </ul>
+    </li>
+  <% end %>
+</ul>
