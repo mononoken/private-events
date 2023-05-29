@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   root 'events#index'
 
   resources :users, only: [:show]
-  resources :events, only: %i[index new create show]
+  resources :events, only: %i[index new create show edit update]
 end
