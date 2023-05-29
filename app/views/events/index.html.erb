@@ -1,5 +1,7 @@
 <h1>Greg's List of Cool Happenings</h1>
 
+<%= render 'current_user' %>
+
 <% @events.all.reverse.each do |event| %>
   <%= render partial: 'event', locals: { event: event } %>
 <% end %>
