@@ -1,21 +1,5 @@
 <h1>New Event</h1>
 
-<div class="current-user-info">
-  <%= current_user.email %>
-</div>
+<%= render 'current_user' %>
 
-<%= form_with model: @event do |form| %>
-  <p>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </p>
-  <p>
-    <%= form.label :datetime %>
-    <%= form.datetime_select :datetime %>
-  </p>
-  <p>
-    <%= form.label :location %>
-    <%= form.text_field :location %>
-  </p>
-  <%= form.submit %>
-<% end %>
+<%= render 'form', event: @event %>
