@@ -36,3 +36,6 @@
 
 # Ignore solargraph config
 .solargraph.yml
+
+# Ignore rubocop config
+.rubocop.yml
