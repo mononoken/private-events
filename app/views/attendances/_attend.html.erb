@@ -1,3 +1,8 @@
 <% unless current_user.attended_events.exists?(event.id) %>
-  <%= link_to 'Attend!', new_attendance_path %>
+  <%= link_to 'Attend!', # event.attendees << current_user %>
+  # Should this be << or build? How do I get the attendance to autopopulate the timestamp? I think this needs to be longer.
+<% if false %>
+<% else %>
+  <%= link_to 'Not going', attendance_path, method: :delete %>
+<% end %>
 <% end %>
