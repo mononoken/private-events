@@ -1,0 +1,3 @@
+<% unless current_user.attended_events.exists?(event.id) %>
+  <%= link_to 'Attend!', new_attendance_path %>
+<% end %>

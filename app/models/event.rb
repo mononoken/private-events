@@ -2,6 +2,8 @@ class Event < ApplicationRecord
   validates :name, :datetime, :location, presence: true
   validates :name, uniqueness: true
 
-  belongs_to :creator, class_name: 'User'
-  has_many :attendees, through: :attendees
+  belongs_to :creator, class_name: 'User', inverse_of: 'created_events'
+
+  has_many :attendances
+  has_many :attendees, through: :attendances, inverse_of: 'attended_events'
 end
