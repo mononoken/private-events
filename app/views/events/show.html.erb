@@ -3,6 +3,5 @@
 <%= render partial: 'event', locals: { event: @event } %>
 <%= render partial: 'attendances/form',
            locals: { event: @event, attendance: @attendance } %>
-
-<%= render partial: 'attendances/attendances',
-           locals: { attendances: @event.attendances } %>
+<%= render partial: 'attendances/attendees',
+           locals: { attendees: @event.attendees } %>

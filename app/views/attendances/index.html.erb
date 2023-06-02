@@ -1,3 +1,4 @@
 <h1>Attending <%= link_to "#{@event.name}", @event %></h1>
 
-<%= render partial: 'attendances', locals: { attendances: @attendances } %>
+<%= render partial: 'attendees',
+           locals: { attendees: @event.attendees } %>
