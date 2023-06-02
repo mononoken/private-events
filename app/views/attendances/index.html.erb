@@ -1,5 +1,3 @@
 <h1>Attending <%= link_to "#{@event.name}", @event %></h1>
 
-<% @attendances.each do |attendance| %>
-  <%= attendance.attendee.email %>
-<% end %>
+<%= render partial: 'attendances', locals: { attendances: @attendances } %>

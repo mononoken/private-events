@@ -1,0 +1,5 @@
+<h2>Attendees: </h2>
+<ul><% attendances.each do |attendance| %>
+  <li><%= attendance.attendee.email %></li>
+<% end %>
+</ul>
