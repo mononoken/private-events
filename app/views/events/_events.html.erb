@@ -1,0 +1,15 @@
+<% if false %>
+<% events.reverse.each do |event| %>
+  <%= render partial: 'events/event', locals: { event: event } %>
+<% end %>
+<% end %>
+
+<h3>Past Events</h3>
+<% events.where('datetime < ?', DateTime.now).each do |event| %>
+  <%= render partial: 'events/event', locals: { event: event } %>
+<% end %>
+
+<h3>Upcoming Events</h3>
+<% events.where('datetime >= ?', DateTime.now).each do |event| %>
+  <%= render partial: 'events/event', locals: { event: event } %>
+<% end %>
