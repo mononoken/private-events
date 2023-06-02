@@ -7,11 +7,8 @@ class Event < ApplicationRecord
   has_many :attendances, dependent: :destroy
   has_many :attendees, through: :attendances, inverse_of: 'attended_events'
 
-  def self.past
-    where('datetime < ?', DateTime.now)
-  end
+  default_scope { order(datetime: :desc) }
 
-  def self.upcoming
-    where('datetime >= ?', DateTime.now)
-  end
+  scope :past, -> { where('datetime < ?', DateTime.now) }
+  scope :upcoming, -> { where('datetime >= ?', DateTime.now) }
 end
