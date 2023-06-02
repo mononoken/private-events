@@ -6,4 +6,12 @@ class Event < ApplicationRecord
 
   has_many :attendances, dependent: :destroy
   has_many :attendees, through: :attendances, inverse_of: 'attended_events'
+
+  def self.past
+    where('datetime < ?', DateTime.now)
+  end
+
+  def self.upcoming
+    where('datetime >= ?', DateTime.now)
+  end
 end
