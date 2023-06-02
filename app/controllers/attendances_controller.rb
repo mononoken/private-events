@@ -23,8 +23,7 @@ class AttendancesController < ApplicationController
     @attendance = @event.attendances.find(params[:id])
     @attendance.destroy
 
-    redirect_to event_path(@event), status: :see_other
-    # render @event, status: :see_other
+    render @event, status: :see_other
   end
 
   private
