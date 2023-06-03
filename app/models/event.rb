@@ -1,7 +1,4 @@
 class Event < ApplicationRecord
-  validates :name, :datetime, :location, presence: true
-  validates :name, uniqueness: true
-
   belongs_to :creator, class_name: 'User', inverse_of: 'created_events'
 
   has_many :attendances, dependent: :destroy
@@ -11,4 +8,7 @@ class Event < ApplicationRecord
 
   scope :past, -> { where('datetime < ?', DateTime.now) }
   scope :upcoming, -> { where('datetime >= ?', DateTime.now) }
+
+  validates :name, :datetime, :location, presence: true
+  validates :name, uniqueness: true
 end
