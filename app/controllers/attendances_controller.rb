@@ -1,4 +1,5 @@
 class AttendancesController < ApplicationController
+  before_action :authenticate_user!, except: %i[index]
   before_action :get_event
 
   def index
