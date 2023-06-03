@@ -5,5 +5,7 @@
 
   <% if event.creator == current_user %>
     <%= link_to 'Edit', edit_event_path(event) %>
+    <%= button_to 'Destroy', event_path(event), method: :delete,
+                             data: { turbo_confirm: 'Are you sure?' } %>
   <% end %>
 </div>
