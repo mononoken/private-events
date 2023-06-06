@@ -1,11 +1,11 @@
 <h2>Attendees: </h2>
 
 <% if attendees.any? %>
-  <ul>
+  <ul class="attendees">
     <% attendees.each do |attendee| %>
       <li><%= attendee.email %></li>
     <% end %>
   </ul>
 <% else %>
-  No attendees currently.
+  <p>No attendees currently.</p>
 <% end %>

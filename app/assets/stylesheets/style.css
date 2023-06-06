@@ -1,0 +1,49 @@
+:root {
+  --main-bg-color: #63c5ae;
+  --second-bg-color: #bfffcb;
+  --border-color: #2e5749;
+  --main-font-color: #242f2b;
+  --dark-accent-color: #1f8843;
+  --light-accent-color: #52bc63;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+}
+
+.screen {
+  background-color: var(--second-bg-color);
+  margin: auto;
+  width: 80%;
+  border: 16px solid var(--border-color);
+  border-radius: 32px;
+  padding: 32px;
+}
+
+a {
+  color: var(--dark-accent-color);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}

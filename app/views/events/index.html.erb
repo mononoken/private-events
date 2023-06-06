@@ -1,7 +1,5 @@
-<h1>Candy Kindgom Event Bulletin Board</h1>
+<h1 class="title">Event Planner</h1>
 
-<div>
-  <%= link_to 'Create Event', new_event_path %>
-</div>
+<%= link_to 'Create Event', new_event_path %>
 
 <%= render partial: 'events', locals: { events: @events } %>
