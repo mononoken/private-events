@@ -11,20 +11,19 @@
   </head>
 
   <body>
-    <div class="header">
-      <%= link_to 'Home', root_path %>
-      <div class="current-user-opts">
-        <% if user_signed_in? %>
-          <%= current_user.email %>
-          <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
-        <% else %>
-          <%= link_to 'Sign in', new_user_session_path %>
-        <% end %>
-      </div>
+    <div class="screen">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
     </div>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div class="screen"><%= yield %></div>
+    <div class="session">
+      <% if user_signed_in? %>
+        <%= current_user.email %>
+        <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign in', new_user_session_path %>
+      <% end %>
+    </div>
+    <%= link_to '', root_path, class: "home-button" %>
   </body>
 </html>
