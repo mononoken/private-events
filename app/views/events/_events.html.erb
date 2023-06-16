@@ -1,9 +1,13 @@
 <h2>Upcoming Events</h2>
-<% events.upcoming.each do |event| %>
-  <%= render partial: 'events/event', locals: { event: event } %>
-<% end %>
+<div class="events">
+  <% events.upcoming.each do |event| %>
+    <%= render partial: 'events/event', locals: { event: event } %>
+  <% end %>
+</div>
 
 <h2>Past Events</h2>
-<% events.past.each do |event| %>
-  <%= render partial: 'events/event', locals: { event: event } %>
-<% end %>
+<div class="events">
+  <% events.past.each do |event| %>
+    <%= render partial: 'events/event', locals: { event: event } %>
+  <% end %>
+</div>

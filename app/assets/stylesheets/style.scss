@@ -142,3 +142,14 @@ a.github-button::before {
 .github-button:active {
   border: 8px inset #202066;
 }
+
+.events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.event-info {
+  border: solid 4px var(--light-accent-color);
+  padding: 8px;
+}
