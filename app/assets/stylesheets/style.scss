@@ -15,15 +15,18 @@
 
 html {
   box-sizing: border-box;
-
-  font-family: "Cave Story";
-  font-size: 20px;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+html,
+button {
+  font-family: "Cave Story";
+  font-size: 20px;
 }
 
 body {
@@ -45,28 +48,38 @@ body {
 .screen {
   grid-area: screen;
   background-color: var(--second-bg-color);
-  // height: 80vh;
-  // height: 80svh;
+  // margin: 4vh 4vw;
+  // margin: 4svh 4svw;
   border: 16px solid var(--border-color);
   border-radius: 32px;
-  padding: 32px;
+  padding: 24px 32px;
   overflow-y: auto;
   scrollbar-color: var(--dark-accent-color) var(--second-bg-color);
 }
 
-a {
+a,
+button {
   color: var(--dark-accent-color);
 
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
   background-clip: text;
+  text-decoration: none;
 }
 
-a:hover {
+a:hover,
+button:hover {
   color: transparent;
+  cursor: pointer;
 }
 
-a::before {
+a::before,
+button::before {
   content: ">> ";
+}
+
+button {
+  border-style: none;
+  padding: 0;
 }
 
 h1 {
@@ -97,12 +110,18 @@ a[href="/events/new"] {
 
 .session {
   margin-left: 32px;
+  padding-left: 16px;
   background-color: var(--session-bar-color);
   color: var(--second-bg-color);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.session a {
-  font-size: 64px;
+.session * {
+  font-size: 24px;
 }
 
 a.github-button::before {
