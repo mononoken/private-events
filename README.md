@@ -2,8 +2,10 @@
 
 <!-- ![A screenshot showing a preview of the project (desktop).](public/screenshot-desktop.png "Project Preview (desktop)") -->
 <!-- ![A screenshot showing a preview of the project (mobile).](public/screenshot-mobile.png "Project Preview (Mobile)") -->
-<img src="public/screenshot-desktop.png" height="160">
-<img src="public/screenshot-mobile.png" height="160" style="display:inline;">
+<p float="left">
+  <img src="public/screenshot-desktop.png" height="160">
+  <img src="public/screenshot-mobile.png" height="160">
+</p>
 
 This app allows users to schedule and attend events. It was designed to practice Active Record queries and Active Record associations. It is also the first project where I used Sass.
 
