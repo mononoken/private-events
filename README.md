@@ -1,20 +1,18 @@
 # # Private Events
 
-![A screenshot showing a preview of the <project>.](screenshots/screenshot.png "<project> Preview")
+![A screenshot showing a preview of the project (desktop).](public/screenshot-desktop.png "Project Preview (Desktop)")
+![A screenshot showing a preview of the project (mobile).](public/screenshot-mobile.png "Project Preview (Mobile)")
 
-tl;dr
+This app allows users to schedule and attend events. It was designed to practice Active Record queries and Active Record associations. It is also the first project where I used Sass.
 
-[Click here to see a live-preview hosted on Github).](https://mononoken.github.io/<project_link>/)
+The theme of the project is inspired from the Adventure Time character, [BMO](https://adventuretime.fandom.com/wiki/BMO).
+
+<!-- [Click here to see a live-preview hosted on Github.](https://mononoken.github.io/<project_link>/) -->
 
 ## Table of Contents
 
-- [General Information](#general-information)
 - [Acknowledgements](#acknowledgements)
 - [Reporting Issues / Feedback / Contact](#reporting-issuesfeedbackcontact)
-
-## General Information
-
-tl
 
 ## Acknowledgements
 

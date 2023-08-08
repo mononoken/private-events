@@ -24,7 +24,8 @@ html {
 }
 
 html,
-button {
+button,
+input {
   font-family: "Cave Story";
   font-size: 20px;
 }
@@ -58,7 +59,8 @@ body {
 }
 
 a,
-button {
+button,
+input[type="submit"] {
   color: var(--dark-accent-color);
 
   background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
@@ -72,9 +74,20 @@ button:hover {
   cursor: pointer;
 }
 
+input[type="submit"] {
+  font-size: 1.2rem;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
 a::before,
 button::before {
   content: ">> ";
+}
+
+input[type="submit"] {
+  border: solid 4px var(--light-accent-color);
 }
 
 button {
@@ -99,7 +112,7 @@ h3 {
   font-size: 1.5rem;
 }
 
-form {
+form:not(.button_to) {
   display: grid;
   gap: 8px;
 }
